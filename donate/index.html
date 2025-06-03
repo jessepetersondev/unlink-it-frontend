@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Censorship-Resistant Privacy - Crypto Donations</title>
+    <meta name="description" content="Support our privacy mission with Bitcoin donations. No surveillance, no middlemen, complete financial privacy.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">DIGITAL_CLEANSE</a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/cleanse/" class="nav-link">Cleanse</a></li>
+                <li><a href="/guides/" class="nav-link">Guides</a></li>
+                <li><a href="/donate/" class="nav-link">Donate</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <h1 class="hero-title">Support Censorship-Resistant Privacy</h1>
+            <p class="hero-subtitle">Help us fight surveillance capitalism and government overreach. Your cryptocurrency donations keep this resource free and independent.</p>
+            
+            <div class="hero-buttons">
+                <a href="#bitcoin" class="btn btn-primary">Donate Bitcoin</a>
+                <!-- <a href="#monero" class="btn btn-secondary">Donate Monero</a> -->
+            </div>
+        </div>
+    </section>
+    <!-- Why Crypto Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Cryptocurrency Only?</h2>
+            <p class="section-subtitle">Traditional payment methods compromise your privacy and ours</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🕵️</div>
+                    <h3>No Surveillance</h3>
+                    <p>Traditional payment processors track and report every transaction to governments and corporations. Credit cards, PayPal, and bank transfers create permanent surveillance records.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚫</div>
+                    <h3>No Censorship</h3>
+                    <p>Cryptocurrency cannot be blocked by governments, corporations, or payment processors. Your support reaches us directly without intermediaries who might disagree with our mission.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>No Middlemen</h3>
+                    <p>Direct peer-to-peer transactions without banks, payment processors, or other intermediaries taking fees or controlling the flow of funds.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Privacy Aligned</h3>
+                    <p>Using privacy-focused cryptocurrencies supports the same values we promote. Your donation method matches our privacy mission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cryptocurrency Donation Options -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Cryptocurrency Donation Options</h2>
+            
+            <!-- Bitcoin Donation -->
+            <div class="crypto-donation-card" id="bitcoin">
+                <div class="crypto-header">
+                    <div class="crypto-icon">₿</div>
+                    <h3>Bitcoin Donation</h3>
+                </div>
+                <p>Bitcoin provides pseudonymous transactions and is widely accepted. Use any Bitcoin wallet to send donations.</p>
+                
+                <div class="crypto-content">
+                    <div class="qr-container">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bc1qftg3lqsp9tu5q8n7sr3cr38mx2t6y4fusxxl05" alt="Bitcoin Donation QR Code" class="crypto-qr">
+                    </div>
+                    
+                    <div class="address-section">
+                        <h4>Bitcoin Address:</h4>
+                        <div class="address-container">
+                            <code class="crypto-address" id="bitcoin-address">bc1qftg3lqsp9tu5q8n7sr3cr38mx2t6y4fusxxl05</code>
+                            <button class="copy-btn" onclick="copyAddress('bitcoin-address')">
+                                <span class="copy-text">Copy Address</span>
+                                <span class="copy-success">Copied!</span>
+                            </button>
+                        </div>
+                        
+                        <div class="terminal-example">
+                            <div class="terminal-header">
+                                <span class="terminal-title">$ bitcoin-cli sendtoaddress</span>
+                            </div>
+                            <div class="terminal-content">
+                                <span class="terminal-prompt">$</span> bitcoin-cli sendtoaddress bc1qftg3lqsp9tu5q8n7sr3cr38mx2t6y4fusxxl05 0.001
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Monero Donation -->
+            <!-- <div class="crypto-donation-card" id="monero">
+                <div class="crypto-header">
+                    <div class="crypto-icon">ɱ</div>
+                    <h3>Monero Donation</h3>
+                </div>
+                <p>Monero provides true privacy with ring signatures, stealth addresses, and confidential transactions. The gold standard for private cryptocurrency.</p>
+                
+                <div class="crypto-content">
+                    <div class="qr-container">
+                        <img src="../images/monero_qr.png" alt="Monero Donation QR Code" class="crypto-qr">
+                    </div>
+                    
+                    <div class="address-section">
+                        <h4>Monero Address:</h4>
+                        <div class="address-container">
+                            <code class="crypto-address" id="monero-address">4AdUndXHHZ6cfufTMvppY6JwXNouMBzSkbLYfpAV5Usx3skxNgYeTRJ5BMG2XBoXxtkzTL1udcYXvvXmvGv4AhA2g5ykn</code>
+                            <button class="copy-btn" onclick="copyAddress('monero-address')">
+                                <span class="copy-text">Copy Address</span>
+                                <span class="copy-success">Copied!</span>
+                            </button>
+                        </div>
+                        
+                        <div class="terminal-example">
+                            <div class="terminal-header">
+                                <span class="terminal-title">$ monero-wallet-cli transfer</span>
+                            </div>
+                            <div class="terminal-content">
+                                <span class="terminal-prompt">$</span> monero-wallet-cli transfer 4AdUndXHHZ6cfufTMvppY6JwXNouMBzSkbLYfpAV5Usx3skxNgYeTRJ5BMG2XBoXxtkzTL1udcYXvvXmvGv4AhA2g5ykn 0.01
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- Mission Support -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">How Your Donations Help</h2>
+            <p class="section-subtitle">Supporting the fight for digital privacy and freedom</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Educational Content</h3>
+                    <p>Create comprehensive privacy guides, tutorials, and resources to help people protect their digital identity and escape surveillance.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Tool Development</h3>
+                    <p>Build and maintain privacy tools, automated update systems, and infrastructure to keep privacy resources current and accessible.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Server Costs</h3>
+                    <p>Maintain secure, privacy-focused hosting infrastructure without relying on surveillance-based advertising or corporate funding.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Independence</h3>
+                    <p>Stay completely independent from government grants, corporate sponsorship, and surveillance-based revenue models.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Continuous Updates</h3>
+                    <p>Keep privacy guides current with evolving threats, new surveillance programs, and emerging privacy tools and techniques.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Expansion</h3>
+                    <p>Develop new features, create mobile apps, build browser extensions, and expand our privacy education platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Digital Cleanse</h3>
+                    <p>Empowering individuals to reclaim their digital privacy and sovereignty.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/cleanse/">Privacy Checklist</a></li>
+                        <li><a href="/guides/">Training Courses</a></li>
+                        <li><a href="/donate/">Support Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Mission</h4>
+                    <ul>
+                        <li>No Tracking</li>
+                        <li>No Surveillance</li>
+                        <li>Crypto Only</li>
+                        <li>Open Source</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Digital Identity Cleanse. Privacy is a human right.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <style>
+        /* Cryptocurrency donation specific styles */
+        .crypto-donation-card {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid #00ff41;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .crypto-donation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #00ff41, #00cc33);
+        }
+
+        .crypto-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .crypto-icon {
+            font-size: 2.5rem;
+            color: #ffa500;
+            font-weight: bold;
+        }
+
+        .crypto-content {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .qr-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 240px;
+        }
+
+        .crypto-qr {
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;
+        }
+
+        .address-section h4 {
+            color: #00ff41;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .address-container {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .crypto-address {
+            display: block;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+            word-break: break-all;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .copy-btn {
+            background: linear-gradient(135deg, #00ff41 0%, #00cc33 100%);
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 255, 65, 0.4);
+        }
+
+        .copy-success {
+            display: none;
+        }
+
+        .copy-btn.copied .copy-text {
+            display: none;
+        }
+
+        .copy-btn.copied .copy-success {
+            display: inline;
+        }
+
+        .terminal-example {
+            background: #000;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .terminal-header {
+            background: #1a1a1a;
+            padding: 10px 15px;
+            border-bottom: 1px solid #333;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .terminal-content {
+            padding: 15px;
+            color: #00ff41;
+            font-size: 0.9rem;
+        }
+
+        .terminal-prompt {
+            color: #ffa500;
+            margin-right: 5px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .crypto-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .qr-container {
+                margin: 0 auto;
+            }
+
+            .crypto-qr {
+                width: 180px;
+                height: 180px;
+            }
+
+            .crypto-address {
+                font-size: 0.8rem;
+            }
+        }
+        /* Bitcoin specific styling */
+        #bitcoin .crypto-donation-card::before {
+            background: linear-gradient(to right, #ffa500, #ff8c00);
+        }
+
+        #bitcoin .crypto-icon {
+            color: #ffa500;
+        }
+
+        #bitcoin .copy-btn {
+            background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+            color: #000;
+        }
+
+        #bitcoin .copy-btn:hover {
+            box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+        }
+
+        /* Monero specific styling */
+        #monero .crypto-donation-card::before {
+            background: linear-gradient(to right, #00ff41, #00cc33);
+        }
+
+        #monero .crypto-icon {
+            color: #00ff41;
+        }
+    </style>
+
+    <script>
+        function copyAddress(addressId) {
+            const addressElement = document.getElementById(addressId);
+            const address = addressElement.textContent;
+            const button = addressElement.parentNode.querySelector('.copy-btn');
+            
+            // Create temporary textarea for copying
+            const textarea = document.createElement('textarea');
+            textarea.value = address;
+            textarea.setAttribute('readonly', '');
+            textarea.style.position = 'absolute';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            
+            // Select and copy
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            
+            // Show success state
+            button.classList.add('copied');
+            
+            // Reset after 2 seconds
+            setTimeout(() => {
+                button.classList.remove('copied');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Identity Cleanse Checklist - Complete Privacy Guide</title>
+    <meta name="description" content="Comprehensive step-by-step checklist to remove your digital footprint. Delete social media, opt out of data brokers, and harden your privacy settings.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
+    <style>
+        .progress-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--bitcoin-orange), var(--monero-green));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        .category-progress {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .time-estimate {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .checklist-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .completed {
+            opacity: 0.7;
+        }
+        .export-buttons {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .export-buttons .btn {
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">DIGITAL_CLEANSE</a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/cleanse/" class="nav-link">Cleanse</a></li>
+                <li><a href="/guides/" class="nav-link">Guides</a></li>
+                <li><a href="/donate/" class="nav-link">Donate</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Digital Identity Cleanse Checklist</h1>
+                <p class="hero-subtitle">
+                    This comprehensive checklist will guide you through removing your digital footprint systematically. 
+                    Each category includes step-by-step instructions, time estimates, and difficulty levels. 
+                    Complete all categories for maximum privacy protection.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overall Progress -->
+    <section class="section">
+        <div class="container">
+            <div class="progress-container">
+                <h2>Overall Progress</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="overall-progress"></div>
+                </div>
+                <div class="category-progress">
+                    <span id="progress-text">0/50 tasks completed</span>
+                    <span id="estimated-time">Estimated time remaining: 8-16 hours</span>
+                </div>
+            </div>
+            
+            <div class="export-buttons">
+                <button class="btn btn-primary" onclick="exportProgress()">Export Progress</button>
+                <a href="../guides/privacy-checklist.pdf" class="btn btn-secondary">Download PDF Guide</a>
+                <button class="btn btn-primary" onclick="resetProgress()">Reset All</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 1: Social Media Purge -->
+    <section class="section">
+        <div class="container">
+            <div class="checklist checklist-category" data-category="social-media">
+                <div class="checklist-header">
+                    <div>
+                        <h2>1. Social Media Purge</h2>
+                        <div class="time-estimate">⏱️ 2-4 hours</div>
+                    </div>
+                    <div>
+                        <span class="difficulty-badge difficulty-beginner">Beginner</span>
+                        <span class="progress-text">0/10 completed</span>
+                    </div>
+                </div>
+                
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="facebook-data" />
+                        <label for="facebook-data">Download your Facebook data archive before deletion</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="facebook-delete" />
+                        <label for="facebook-delete">Delete Facebook account permanently (not deactivate)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="instagram-delete" />
+                        <label for="instagram-delete">Remove Instagram account and request data deletion</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="twitter-delete" />
+                        <label for="twitter-delete">Delete Twitter/X account permanently</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="linkedin-privacy" />
+                        <label for="linkedin-privacy">Remove LinkedIn profile or maximize privacy settings</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="tiktok-delete" />
+                        <label for="tiktok-delete">Delete TikTok account and request data deletion</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="snapchat-delete" />
+                        <label for="snapchat-delete">Remove Snapchat account</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="youtube-delete" />
+                        <label for="youtube-delete">Delete YouTube account and watch history</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="pinterest-delete" />
+                        <label for="pinterest-delete">Remove Pinterest account</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="reddit-delete" />
+                        <label for="reddit-delete">Delete Reddit account and posts</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 2: Data Broker Removal -->
+    <section class="section">
+        <div class="container">
+            <div class="checklist checklist-category" data-category="data-brokers">
+                <div class="checklist-header">
+                    <div>
+                        <h2>2. Data Broker Removal</h2>
+                        <div class="time-estimate">⏱️ 4-8 hours (or use paid service)</div>
+                    </div>
+                    <div>
+                        <span class="difficulty-badge difficulty-intermediate">Intermediate</span>
+                        <span class="progress-text">0/13 completed</span>
+                    </div>
+                </div>
+                
+                <h3 style="color: #ff6b35; margin: 2rem 0 1rem 0;">Manual Removal (Free but Time-Consuming)</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="whitepages-opt" />
+                        <label for="whitepages-opt">Opt out of Whitepages</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="spokeo-remove" />
+                        <label for="spokeo-remove">Remove from Spokeo</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="beenverified-delete" />
+                        <label for="beenverified-delete">Delete BeenVerified listing</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="intelius-remove" />
+                        <label for="intelius-remove">Remove from Intelius</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="peoplefinder-opt" />
+                        <label for="peoplefinder-opt">Opt out of PeopleFinder</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="truepeoplesearch-delete" />
+                        <label for="truepeoplesearch-delete">Delete from TruePeopleSearch</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="fastpeoplesearch-remove" />
+                        <label for="fastpeoplesearch-remove">Remove from FastPeopleSearch</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mylife-opt" />
+                        <label for="mylife-opt">Opt out of MyLife</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="radaris-delete" />
+                        <label for="radaris-delete">Delete from Radaris</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="411-remove" />
+                        <label for="411-remove">Remove from 411.com</label>
+                    </li>
+                </ul>
+
+                <h3 style="color: #00d4aa; margin: 2rem 0 1rem 0;">Paid Services (Recommended for Efficiency)</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="incogni-subscribe" />
+                        <label for="incogni-subscribe">Subscribe to Incogni ($12.99/month) - Most comprehensive</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="optery-subscribe" />
+                        <label for="optery-subscribe">Or use Optery ($19.95/month) - Good alternative</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="deleteme-subscribe" />
+                        <label for="deleteme-subscribe">Or try DeleteMe ($129/year) - Budget option</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 3: Browser Hardening -->
+    <section class="section">
+        <div class="container">
+            <div class="checklist checklist-category" data-category="browser-hardening">
+                <div class="checklist-header">
+                    <div>
+                        <h2>3. Browser Hardening</h2>
+                        <div class="time-estimate">⏱️ 1-2 hours</div>
+                    </div>
+                    <div>
+                        <span class="difficulty-badge difficulty-intermediate">Intermediate</span>
+                        <span class="progress-text">0/15 completed</span>
+                    </div>
+                </div>
+                
+                <h3 style="color: #ff6b35; margin: 2rem 0 1rem 0;">Firefox Configuration</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="firefox-install" />
+                        <label for="firefox-install">Install Firefox (if not already installed)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="firefox-tracking" />
+                        <label for="firefox-tracking">Enable Enhanced Tracking Protection (Strict mode)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="firefox-telemetry" />
+                        <label for="firefox-telemetry">Disable telemetry and data collection in settings</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="ublock-install" />
+                        <label for="ublock-install">Install uBlock Origin extension</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="clearurls-install" />
+                        <label for="clearurls-install">Install ClearURLs extension</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="firefox-dns" />
+                        <label for="firefox-dns">Configure DNS over HTTPS (Cloudflare or Quad9)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="firefox-webrtc" />
+                        <label for="firefox-webrtc">Disable WebRTC IP leak in about:config</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="firefox-search" />
+                        <label for="firefox-search">Set search engine to DuckDuckGo</label>
+                    </li>
+                </ul>
+
+                <h3 style="color: #00d4aa; margin: 2rem 0 1rem 0;">Tor Browser Setup</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="tor-download" />
+                        <label for="tor-download">Download Tor Browser from official torproject.org</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="tor-verify" />
+                        <label for="tor-verify">Verify download signature for authenticity</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="tor-security" />
+                        <label for="tor-security">Configure security level to "Safest"</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="tor-downloads" />
+                        <label for="tor-downloads">Never download files through Tor Browser</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="tor-onion" />
+                        <label for="tor-onion">Use .onion sites when available</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="tor-javascript" />
+                        <label for="tor-javascript">Disable JavaScript for maximum security</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="tor-bridges" />
+                        <label for="tor-bridges">Configure bridges if in censored country</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 4: OS-Level Privacy -->
+    <section class="section">
+        <div class="container">
+            <div class="checklist checklist-category" data-category="os-privacy">
+                <div class="checklist-header">
+                    <div>
+                        <h2>4. OS-Level Privacy</h2>
+                        <div class="time-estimate">⏱️ 2-3 hours</div>
+                    </div>
+                    <div>
+                        <span class="difficulty-badge difficulty-advanced">Advanced</span>
+                        <span class="progress-text">0/12 completed</span>
+                    </div>
+                </div>
+                
+                <h3 style="color: #ff6b35; margin: 2rem 0 1rem 0;">Windows 11 Privacy</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="win-telemetry" />
+                        <label for="win-telemetry">Disable telemetry and diagnostics data collection</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="win-advertising" />
+                        <label for="win-advertising">Turn off advertising ID and personalized ads</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="win-location" />
+                        <label for="win-location">Disable location tracking and services</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="win-cortana" />
+                        <label for="win-cortana">Disable Cortana data collection and cloud sync</label>
+                    </li>
+                </ul>
+
+                <h3 style="color: #00d4aa; margin: 2rem 0 1rem 0;">macOS Privacy</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mac-siri" />
+                        <label for="mac-siri">Disable Siri data collection and analytics</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mac-location" />
+                        <label for="mac-location">Turn off location services for unnecessary apps</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mac-analytics" />
+                        <label for="mac-analytics">Disable app analytics sharing with Apple</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mac-icloud" />
+                        <label for="mac-icloud">Disable iCloud data sync for sensitive data</label>
+                    </li>
+                </ul>
+
+                <h3 style="color: #ff3333; margin: 2rem 0 1rem 0;">Mobile Privacy (Android/iOS)</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mobile-location" />
+                        <label for="mobile-location">Disable location history and tracking</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mobile-ads" />
+                        <label for="mobile-ads">Turn off ad personalization and tracking</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mobile-permissions" />
+                        <label for="mobile-permissions">Audit and restrict app permissions</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="mobile-analytics" />
+                        <label for="mobile-analytics">Disable app usage analytics and crash reporting</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 5: Communication Privacy -->
+    <section class="section">
+        <div class="container">
+            <div class="checklist checklist-category" data-category="communication">
+                <div class="checklist-header">
+                    <div>
+                        <h2>5. Communication Privacy</h2>
+                        <div class="time-estimate">⏱️ 1-2 hours</div>
+                    </div>
+                    <div>
+                        <span class="difficulty-badge difficulty-beginner">Beginner</span>
+                        <span class="progress-text">0/10 completed</span>
+                    </div>
+                </div>
+                
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="signal-install" />
+                        <label for="signal-install">Install Signal messenger for encrypted communication</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="sms-delete" />
+                        <label for="sms-delete">Delete SMS/text message history</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="whatsapp-delete" />
+                        <label for="whatsapp-delete">Remove WhatsApp (owned by Meta/Facebook)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="protonmail-setup" />
+                        <label for="protonmail-setup">Set up encrypted email (ProtonMail or Tutanota)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="signal-disappearing" />
+                        <label for="signal-disappearing">Enable disappearing messages in Signal</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="carrier-opt-out" />
+                        <label for="carrier-opt-out">Opt out of carrier data sharing programs</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="voicemail-disable" />
+                        <label for="voicemail-disable">Disable voicemail or use encrypted alternatives</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="email-aliases" />
+                        <label for="email-aliases">Set up email aliases for different services</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="old-email-delete" />
+                        <label for="old-email-delete">Delete old Gmail/Yahoo/Outlook accounts</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="contact-cleanup" />
+                        <label for="contact-cleanup">Clean up and encrypt contact lists</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completion Section -->
+    <section class="section">
+        <div class="container">
+            <div class="threat-alert" style="border-color: #00ff41;">
+                <h2 style="color: #00ff41; border-bottom-color: #00ff41;">🎉 Congratulations on Completing Your Digital Cleanse!</h2>
+                <p style="color: #00ff41; font-size: 1.2rem; margin: 2rem 0;">
+                    You've taken significant steps to protect your privacy and reduce your digital footprint. 
+                    Your data is now much harder for surveillance systems and data brokers to collect and exploit.
+                </p>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0;">Next Steps for Ongoing Privacy:</h3>
+                <ul class="threat-list" style="color: #cccccc;">
+                    <li><strong>Regular Audits:</strong> Repeat this checklist every 6 months to catch new data collection</li>
+                    <li><strong>Stay Updated:</strong> Follow our threat intelligence blog for new privacy threats</li>
+                    <li><strong>Use Privacy Tools:</strong> Continue using Tor, VPNs, and encrypted communication</li>
+                    <li><strong>Spread Awareness:</strong> Share this checklist with friends and family</li>
+                    <li><strong>Support the Mission:</strong> Consider donating Bitcoin or Monero to keep this resource free</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="../donate/" class="btn btn-secondary">Support with Crypto Donation</a>
+                    <a href="../guides/" class="btn btn-primary">Read Advanced Privacy Guides</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Privacy Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../cleanse/">Digital Cleanse Checklist</a></li>
+                        <li><a href="../guides/">Privacy Guides</a></li>
+                        <li><a href="../guides/browsers/">Browser Hardening</a></li>
+                        <li><a href="../guides/os-privacy/">OS Privacy Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="../donate/">Bitcoin Donations</a></li>
+                        <li><a href="../donate/">Monero Donations</a></li>
+                        <li><a href="https://github.com/privacy-cleanse/website">Source Code</a></li>
+                        <li><a href="mailto:contact@unlink.it.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Progress Tracking</h4>
+                    <p style="color: #cccccc; font-size: 0.9rem;">
+                        Your checklist progress is saved locally in your browser. 
+                        No data is transmitted to our servers or any third parties.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    No tracking • No cookies • No surveillance • 
+                    <a href="https://github.com/privacy-cleanse/website" style="color: #00ff41;">Open Source</a> • 
+                    Privacy-first design
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Enhanced checklist functionality
+        function updateProgress() {
+            const categories = document.querySelectorAll('.checklist-category');
+            let totalTasks = 0;
+            let completedTasks = 0;
+            
+            categories.forEach(category => {
+                const checkboxes = category.querySelectorAll('input[type="checkbox"]');
+                const checked = category.querySelectorAll('input[type="checkbox"]:checked');
+                const progressText = category.querySelector('.progress-text');
+                
+                totalTasks += checkboxes.length;
+                completedTasks += checked.length;
+                
+                if (progressText) {
+                    progressText.textContent = `${checked.length}/${checkboxes.length} completed`;
+                }
+                
+                // Update category completion status
+                if (checked.length === checkboxes.length && checkboxes.length > 0) {
+                    category.classList.add('completed');
+                } else {
+                    category.classList.remove('completed');
+                }
+            });
+            
+            // Update overall progress
+            const progressFill = document.getElementById('overall-progress');
+            const progressText = document.getElementById('progress-text');
+            const estimatedTime = document.getElementById('estimated-time');
+            
+            const progressPercentage = totalTasks > 0 ? (completedTasks / totalTasks) * 100 : 0;
+            
+            if (progressFill) {
+                progressFill.style.width = progressPercentage + '%';
+            }
+            
+            if (progressText) {
+                progressText.textContent = `${completedTasks}/${totalTasks} tasks completed`;
+            }
+            
+            if (estimatedTime) {
+                const remainingTasks = totalTasks - completedTasks;
+                const minHours = Math.ceil(remainingTasks * 0.15);
+                const maxHours = Math.ceil(remainingTasks * 0.3);
+                estimatedTime.textContent = `Estimated time remaining: ${minHours}-${maxHours} hours`;
+            }
+        }
+        
+        function exportProgress() {
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            const progress = {};
+            
+            checkboxes.forEach(checkbox => {
+                progress[checkbox.id] = checkbox.checked;
+            });
+            
+            const dataStr = JSON.stringify(progress, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'privacy-checklist-progress.json';
+            link.click();
+            
+            URL.revokeObjectURL(url);
+        }
+        
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+                const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+                localStorage.removeItem('privacy-checklist');
+                updateProgress();
+            }
+        }
+        
+        // Initialize progress tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+            
+            // Add event listeners to all checkboxes
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateProgress);
+            });
+        });
+    </script>
+</body>
+</html>
+
