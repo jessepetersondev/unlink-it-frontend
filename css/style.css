@@ -171,6 +171,7 @@ p {
     var(--bg-primary);
   position: relative;
   overflow: hidden;
+  padding-top: 10px;
 }
 
 .hero::before {
