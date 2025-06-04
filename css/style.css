@@ -605,3 +605,60 @@ a:focus, button:focus, input:focus {
   }
 }
 
+/* ── Navbar logo (always visible) ───────────────────────────────────────────── */
+
+.logo-img {
+  display: block;        /* remove any inline-block gaps */
+  height: 40px;          /* desktop height */
+  width: auto;
+  transition: opacity 0.3s ease;
+}
+.logo-img:hover {
+  opacity: 0.8;
+}
+
+/* shrink navbar logo slightly on smaller screens */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 32px;
+  }
+}
+
+
+/* ── Hero logo (responsive sizing) ──────────────────────────────────────────── */
+
+/* 
+  By default (desktop), cap the hero logo at 150px tall. 
+  “max-height” lets it scale down if the container is narrower.
+*/
+.logo-img-hero {
+  display: block;
+  max-height: 150px;
+  width: auto;
+  transition: opacity 0.3s ease;
+  margin: 0 auto;      /* center inside .hero-content */
+}
+.logo-img-hero:hover {
+  opacity: 0.8;
+}
+
+/* Tablet: reduce the hero logo to 120px */
+@media (max-width: 1024px) {
+  .logo-img-hero {
+    max-height: 120px;
+  }
+}
+
+/* Mobile: reduce the hero logo to 80px */
+@media (max-width: 768px) {
+  .logo-img-hero {
+    max-height: 80px;
+  }
+}
+
+/* Very small phones: reduce the hero logo to 60px */
+@media (max-width: 480px) {
+  .logo-img-hero {
+    max-height: 60px;
+  }
+}
