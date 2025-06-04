@@ -7,7 +7,6 @@
     <meta name="description" content="Support our privacy mission with Bitcoin donations. No surveillance, no middlemen, complete financial privacy.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
 </head>
 <body>
     <!-- Navigation -->
@@ -422,33 +421,7 @@
         }
     </style>
 
-    <script>
-        function copyAddress(addressId) {
-            const addressElement = document.getElementById(addressId);
-            const address = addressElement.textContent;
-            const button = addressElement.parentNode.querySelector('.copy-btn');
-            
-            // Create temporary textarea for copying
-            const textarea = document.createElement('textarea');
-            textarea.value = address;
-            textarea.setAttribute('readonly', '');
-            textarea.style.position = 'absolute';
-            textarea.style.left = '-9999px';
-            document.body.appendChild(textarea);
-            
-            // Select and copy
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            
-            // Show success state
-            button.classList.add('copied');
-            
-            // Reset after 2 seconds
-            setTimeout(() => {
-                button.classList.remove('copied');
-            }, 2000);
-        }
+    <script src="../js/donate.js">
     </script>
 </body>
 </html>
